@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>4주차 2번</title>
+
+  </head>
+  <body>
+    <script type="text/javascript">
+    function score(){
+      var point=0;
+      var Q1=document.getElementsByName('q1');
+      var Q2=document.getElementsByName('q2');
+      var Q3=document.getElementsByName('q3');
+
+      var select1="";
+      var select2="";
+      var select3="";
+
+      for(var i=0; i<Q1.length; i++){
+        if(Q1[i].checked)
+        select1 = Q1[i].value;
+      }
+      for(var i=0; i<Q2.length; i++){
+        if(Q2[i].checked)
+        select2 = Q2[i].value;
+      }
+      for(var i=0; i<Q3.length; i++){
+        if(Q3[i].checked)
+        select3 = Q3[i].value;
+      }
+      if(select1=="!DOCTYPE"){
+        point++;
+      }
+      if(select2=="mark"){
+        point++;
+      }
+      if(select3=="wbr"){
+        point++;
+      }
+      document.getElementById('show').value=point;
+
+    }
+
+    function reset(){
+      for(var i=0; i < question.q1.length; i++){
+        question.q1[i].checked = false;
+      }
+      for(var i=0; i < question.q2.length; i++){
+        question.q2[i].checked = false;
+      }
+      for(var i=0; i < question.q3.length; i++){
+        question.q3[i].checked = false;
+      }
+      document.getElementById("show").value=0;
+    }
+    </script>
+  <h1><center>문제</center></h1>
+  <hr color="Red"><br>
+  <form name="question">
+    1.브라우저에게 문서의 유형을 알려주는 것으로, HTML5의 문서 유형을 선언하는
+    html태그는?
+    <br><br><br>
+      <input type="radio" name="q1" value="HTML5">!HTML5</input>
+      <input type="radio" name="q1" value="!DOCTYPE">!DOCTYPE</input>
+      <input type="radio" name="q1" value="!DOCTYPE5">!DOCTYPE5</input>
+      <input type="radio" name="q1" value="HTML5-DOCTYPE">!HTML5-DOCTYPE</input>
+    <br><br>
+
+    2.중요하다고 생각되는 부분을 표시하는 태그는?
+    <br><br><br>
+    <input type="radio" name="q2" value="progress">progress</input>
+    <input type="radio" name="q2" value="input">input</input>
+    <input type="radio" name="q2" value="summary">summary</input>
+    <input type="radio" name="q2" value="mark">mark</input>
+    <br><br>
+
+    3.화면의 너비 때문에 줄바꿈이 필요한 경우 지정된 곳에서 줄바꿈을
+    허용하는 태그는?
+    <br><br><br>
+
+    <input type="radio" name="q3" value="wbr">wbr</input>
+    <input type="radio" name="q3" value="fieldset">fieldset</input>
+    <input type="radio" name="q3" value="legend">legend</input>
+    <input type="radio" name="q3" value="meter">meter</input>
+    <br><br>
+</form>
+
+  <input type="button" value="채점" onclick="score()"/>
+  <input type="button" value="리셋" onclick="reset()"/>
+  <meter id="show" optimum=3 low=1.2 high=2.2 max=3 min=0></meter>
+
+
+  </body>
+</html>
