@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6주차 3번</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#change_img').click(function(){
+          $('#img1').attr('src', 'baek.jpg');
+        });
+        $('#change_url').click(function(){
+          $('#home').attr('href',"https://lib.dongguk.edu")
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="https://www.dongguk.edu" id='home'>페이지 이동</a>
+    <button id='change_url'>URL 변경</button>
+    <br>
+    <img id="img1" src="shy.jpg">
+    <br>
+    <button id='change_img'>사진변경</button>
+
+  </body>
+</html>

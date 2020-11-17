@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6주차 4번</title>
+    <h4><b><center>학생 명단</center></b></h4>
+    <p><center><span style="background-color: yellow;"">
+    이름:<span id='name1'></span> 나이:<span id='age1'></span></span><br>
+  </center></p>
+  <p><center><span style="background-color: green;">
+  이름:<span id='name2'></span> 나이:<span id='age2'></span></span><br>
+</center></p>
+<p><center><span style="background-color: gray">
+이름:<span id='name3'></span> 나이:<span id='age3'></span></span><br>
+</center></p>
+<p><center><span style="background-color: pink">
+이름:<span id='name4'></span> 나이:<span id='age4'></span></span><br>
+</center></p>
+<p><center><span style="background-color: orange">
+이름:<span id='name5'></span> 나이:<span id='age5'></span></span><br>
+</center></p>
+  <script>
+    var s='['+
+    '{"name":"Hong", "age":"21"},'+
+    '{"name":"Kim", "age":"21"},'+
+    '{"name":"Kang", "age":"21"},'+
+    '{"name":"Han", "age":"21"},'+
+    '{"name":"Jang", "age":"21"}]';
+
+    var students=eval("("+s+")");
+
+    document.getElementById('name1').innerHTML=students[0].name;
+    document.getElementById('age1').innerHTML=students[0].age;
+
+    document.getElementById('name2').innerHTML=students[1].name;
+    document.getElementById('age2').innerHTML=students[1].age;
+
+    document.getElementById('name3').innerHTML=students[2].name;
+    document.getElementById('age3').innerHTML=students[2].age;
+
+    document.getElementById('name4').innerHTML=students[3].name;
+    document.getElementById('age4').innerHTML=students[3].age;
+
+    document.getElementById('name5').innerHTML=students[4].name;
+    document.getElementById('age5').innerHTML=students[4].age;
+
+  </script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6주차 2번</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#start').click(function(){
+          $('#picture').show().fadeOut("slow").slideDown("slow");
+        });
+        $('#pause').click(function(){
+          $('#picture').fadeOut('fast');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id='start'>시작</button>
+    <button id='pause'>정지</button>
+    <br><br>
+    <img id="picture" src="shy.jpg" style="display: none" />
+  </body>
+</html>

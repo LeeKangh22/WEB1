@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6주차 1번</title>
+    <style>
+      #box
+      {
+        width:70px;
+        height:70px;
+        background-color:blue;
+      }
+      #box.big
+      {
+        width:150px;
+      }
+      #box.small
+      {
+        width:30px;
+      }
+      </style>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $('#button_big').click(function(){
+            $('#box').removeClass('small');
+            $('#box').addClass('big');
+          });
+          $('#button_small').click(function(){
+            $('#box').removeClass('big');
+            $('#box').addClass('small')
+          });
+        });
+      </script>
+  </head>
+  <body>
+    <div id="box"></div>
+      <br>
+      <button id="button_big">상자 확대</button>
+      <button id="button_small">상자 축소</button>
+  </body>
+</html>
