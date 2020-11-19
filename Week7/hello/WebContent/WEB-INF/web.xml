@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>hello</display-name>
+  <servlet><!-- Servlet이름과 실제 Servlet이름을 매핑하는 역할 -->
+     <servlet-name>helloServlet</servlet-name>  <!-- 어플리케이션 내에서의 Servlet 이름 명기 -->
+     <servlet-class>hp.halo</servlet-class> <!-- 실제 servlet클래스 이름을 명시 -->
+  </servlet>
+  <servlet-mapping><!-- servlet 을 접근하기 위한URL설정 -->
+     <servlet-name>helloServlet</servlet-name>
+     <url-pattern>/hihi</url-pattern><!-- servlet을 접근하기 위한 URL명시 -->
+  </servlet-mapping>
+  <welcome-file-list><!-- 서버의 루트 주소만을 입력했을 경우 가장 처음에 띄워줄 경로를 설정하는 태그 -->
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
